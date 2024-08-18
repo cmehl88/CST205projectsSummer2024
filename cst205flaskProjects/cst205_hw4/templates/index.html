@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{ bootstrap.load_css() }}
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- The title at the top of the page-->
+    <h1>Carson's Random Picture Gallery</h1>
+    <br>
+
+    <div>
+        <!-- Loop through the images -->
+        {% for img in images %}
+            <div class="mb-8">
+                <!-- Display the image title as a link to its detail page -->
+                <h2><a href="{{ url_for('image_detail', image_id=img.id) }}">{{ img.title }}</a></h2>
+                <!-- Display the image itself -->
+                <img src="{{ url_for('static', filename='images/' ~ img.id ~ '.jpg') }}">
+                <!-- Use some breaklines to create space between images-->
+                <br><br>
+            </div>
+        {% endfor %}
+    </div>
+    {{ bootstrap.load_js() }}
+</body>
+</html>

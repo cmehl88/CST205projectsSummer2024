@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Cat Randomizer</title>
+    {{ bootstrap.load_css() }}
+</head>
+<body>
+
+    <!-- Header title -->
+    <div>
+        <h1>Cool Cat Image Randomizer</h1>
+    </div>
+
+    <!-- The image and button -->
+    <div>
+        <img id="catImage" src="{{ cat_image_url }}" alt="Random Cat Image">
+        <form action="/fun_fact" method="get">
+        <p>Click on this button below to see a Fun Fact about cats!</p>
+            <button type="submit">Button</button>
+        </form>
+    </div>
+    {{ bootstrap.load_js() }}
+</body>
+</html>

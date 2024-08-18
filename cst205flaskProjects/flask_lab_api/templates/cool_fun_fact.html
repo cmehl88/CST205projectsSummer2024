@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Fact</title>
+    {{ bootstrap.load_css() }}
+</head>
+<body>
+    <div>
+        <h1>Really Cool Random Cat Fun Fact!</h1>
+    </div>
+    
+    <div>
+        <p>{{ cat_fact }}</p>
+    </div>
+    
+    <div>
+        <a href="{{ url_for('index') }}">Click Here to Return Home</a>
+    </div>
+    {{ bootstrap.load_js() }}
+</body>
+</html>

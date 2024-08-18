@@ -1,0 +1,47 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>CST 205 Playlist</title>
+      {{ bootstrap.load_css() }}
+  </head>
+<body>
+    
+    <div class="container">  
+      <h1>Add to the playlist!</h1>
+          
+      <form method="POST" action="/">
+        {{ form.csrf_token }}
+        
+        <!-- This is for the song bar-->
+        <div class="form-group">
+          {{ form.song_title.label(class="form-label") }} 
+          {{ form.song_title(class="form-control") }}
+        </div>
+
+        <!-- Awesome image -->
+        <div class="text-center">
+          <img src="/static/images/dragonforce.png" class="rounded w-40">
+        </div>
+
+        <!-- This is for the genre bar-->
+        <div class="form-group">
+          {{ form.genre_type.label(class="form-label") }}
+          {{ form.genre_type(class="form-control") }}
+        </div>
+
+         <!-- 2nd awesome image -->
+        <div class="text-center">
+          <img src="/static/images/hozier.png" class="rounded w-40">
+        </div>
+
+        <!-- make sure to have this line in or won't work-->
+        <input type="submit" value="Submit" class="btn btn-primary mt-3">
+  </form>
+</div>
+
+   
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{ bootstrap.load_css() }}
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lab 2</h1>
+    
+    <div class="text-center">
+        <img src="static\images\sparklingwater.png" class="rounded w-50">
+        </div>
+
+        <div style="margin-left: 25px;">
+            <p>The Brands</p>
+        </div>
+
+        <ul>
+            {% for item in the_dictionary['brands'] %}
+                <li> {{item}} </li>
+            {% endfor %}
+        </ul>
+        
+        <div style="margin-left: 25px;">
+            <p>The Flavors</p>
+        </div>
+        
+        <ul>
+            {% for item in the_dictionary['flavors'] %}
+                <li> {{item}} </li>
+            {% endfor %}
+        </ul>
+</body>
+</html>
